@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Victor Hugo Suezawa Capelão">
+        
+
+        <link rel="icon" href="./assets/blackpoo.ico">
+        <title>iAtazanador</title>
+
+        <!-- bootstrap css cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- font awesome cdn -->
+        <script src="https://kit.fontawesome.com/2b62139daa.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+    
+        <header>
+            <nav class="navbar navbar-dark bg-dark" style="height: 100px">
+
+                <div class="container">
+
+                    <a style="margin-left: 2%" class="navbar-brand" href="#">
+                        <i class="fas fa-poo"></i>
+                        iAtazanador
+                    </a>
+
+                    <ul class="nav">
+
+                        <a style="color:white" class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a style="color:white" class="nav-link" href="#planos">Planos</a>
+                        <a style="color:white" class="nav-link" href="#info">Contato</a>
+                      
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+        
+            <section class="py-5 container">
+
+                <div class="row py-lg-5">
+
+                    <div class="col-lg-6 col-md-8 mx-auto">
+
+                        <h1 class="fw-light">Conheça o iAtazanador <i class="fas fa-poo"></i><br> A melhor maneira de incomodar pessoas.</h1>
+                        <p class="lead text-muted">
+                            Adquirindo um de nossos planos, nós garantimos um suplimento de schadenfreude o qual você nunca achou possível.<br>
+                            Faça seus inimigos chorarem agora mesmo!
+                        </p>
+                        <p>
+                            <a href="#planos" class="btn btn-dark my-2">Adquira um de nossos planos HOJE!</a>
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-8 mx-auto">
+
+                        <form>
+                            
+                            <div class="mb-3">
+
+                                <p>Cadastre-se na nossa newsletter. Prometemos que não vamos te atazanar. 😈</p>
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="inputNome" placeholder="Insira seu nome" required>
+                            
+                            </div>
+
+                            <div class="mb-3">
+
+                            
+                                <label class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Insira seu e-mail" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text">Nunca compartilharemos o seu endereço de e-mail com ninguém. Sério. 😇</div>
+
+                            </div>
+
+                            <button type="submit" class="btn btn-dark" id="cadastrar">Cadastrar</button>
+
+                        </form>
+
+                        <script>    
+                            var nome = document.getElementById('inputNome');
+                            var email = document.getElementById('inputEmail');
+                        
+                            document.getElementById('cadastrar').addEventListener('click', function() {
+                                localStorage.nome = nome.value;
+                                localStorage.email = email.value;
+                            });
+                        </script>
+
+                    </div>
+
+                </div>
+
+            </section>
+        
+            <div class="album py-5 bg-dark" id="planos">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                        <div class="col">
+                            <div class="card">
+                                <div style="width: 100%; height: 70%; background-color: black;">
+                                    <p style="font-size: 60px; color:white; text-align: center; padding-top: 20%; padding-bottom: 20%; padding-left: 5%; padding-right: 5%">R$ 50 / mês</p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text" style="font-weight: bold; font-size: 30px">Plano básico</p>
+                                    <div>
+                                        <p class="card-text">Plano contendo o pacote meh do iAtazanador. Este plano contém:</p>
+                                        <i class="fas fa-check-circle"></i> Nós inscreveremos o seu alvo em dezenas de listas de spam.<br><br>
+                                        <i class="fas fa-times-circle"></i> Enviaremos cartas irritantes diariamente para o seu alvo.<br><br>
+                                        <i class="fas fa-times-circle"></i> Alguém do nosso time irá tocar a campainha do seu alvo toda semana, às 6 da manhã.
+                                    </div>
+                                    <br>
+                                    <a href="">
+                                        <button style="width:100%" type="button" class="btn btn-lg btn-dark"><span>Adquirir<br></span><span style="font-size: 40px;"><i class="fas fa-frown"></i></span></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div style="width: 100%; height: 70%; background-color: black;">
+                                    <p style="font-size: 60px; color:white; text-align: center; padding-top: 20%; padding-bottom: 20%; padding-left: 5%; padding-right: 5%">R$ 150 / mês</p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text" style="font-weight: bold; font-size: 30px">Plano intermediário</p>
+                                    <div>
+                                        <p class="card-text">Plano contendo o pacote legalzinho do iAtazanador. Este plano contém:</p>
+                                        <i class="fas fa-check-circle"></i> Nós inscreveremos o seu alvo em dezenas de listas de spam.<br><br>
+                                        <i class="fas fa-check-circle"></i> Enviaremos cartas irritantes diariamente para o seu alvo.<br><br>
+                                        <i class="fas fa-times-circle"></i> Alguém do nosso time irá tocar a campainha do seu alvo toda semana, às 6 da manhã.
+                                    </div>
+                                    <br>
+                                    <a href="">
+                                        <button style="width:100%" type="button" class="btn btn-lg btn-dark" href="#"><span>Adquirir<br></span><span style="font-size: 40px;"><i class="fas fa-sad-tear"></i></span></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div style="width: 100%; height: 70%; background-color: black;">
+                                    <p style="font-size: 60px; color:white; text-align: center; padding-top: 20%; padding-bottom: 20%; padding-left: 5%; padding-right: 5%">R$ 250 / mês</p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text" style="font-weight: bold; font-size: 30px">Plano premium</p>
+                                    <div>
+                                        <p class="card-text">Plano contendo o pacote super super especial do iAtazanador. Este plano contém:</p>
+                                        <i class="fas fa-check-circle"></i> Nós inscreveremos o seu alvo em dezenas de listas de spam.<br><br>
+                                        <i class="fas fa-check-circle"></i> Enviaremos cartas irritantes diariamente para o seu alvo.<br><br>
+                                        <i class="fas fa-check-circle"></i> Alguém do nosso time irá tocar a campainha do seu alvo toda semana, às 6 da manhã.
+                                    </div>
+                                    <br>
+                                    <a href="">
+                                        <button style="width:100%" type="button" class="btn btn-lg btn-dark"><span>Adquirir<br></span><span style="font-size: 40px;"><i class="fas fa-sad-cry"></i></span></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="text-muted py-5">
+            <div class="container" id="info">
+                <div class="float-end" style="margin-bottom: 40px">
+                    <i class="fas fa-map-marker-alt"></i> Rua dos bobos, nº 0<br><br>
+                    <i class="fas fa-phone-alt"></i> +55 (00) 90000-0000<br><br>
+                    <i class="fas fa-at"></i> contato@iatazanador.com.br
+
+                </div>
+            </div>
+        </footer>
+    
+    </body>
+
+</html>
+        
